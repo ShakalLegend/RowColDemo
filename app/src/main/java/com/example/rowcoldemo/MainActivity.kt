@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
@@ -40,8 +41,8 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MainScreen(modifier: Modifier = Modifier) {
-    Column(modifier.width(250.dp),
-        horizontalAlignment = Alignment.End) {
+    Row(modifier.size(width = 400.dp, height = 200.dp),
+        horizontalArrangement = Arrangement.End) {
         TextCell("1")
         TextCell("2")
         TextCell("3")
