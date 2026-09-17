@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.paddingFrom
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Scaffold
@@ -19,7 +20,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.blur
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.FirstBaseline
 import androidx.compose.ui.layout.LastBaseline
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -47,7 +50,7 @@ fun MainScreen(modifier: Modifier = Modifier) {
     Row {
         Text("LargeText\n\nMore Text", Modifier.alignBy(LastBaseline), fontSize = 40.sp, fontWeight = FontWeight.Bold
         )
-        Text("SmallText", Modifier.alignByBaseline(), fontSize = 32.sp, fontWeight = FontWeight.Bold
+        Text("SmallText", modifier = Modifier.paddingFrom(alignmentLine = FirstBaseline, before = 80.dp, after = 0.dp), fontSize = 32.sp, fontWeight = FontWeight.Bold
         )
     }
 }
