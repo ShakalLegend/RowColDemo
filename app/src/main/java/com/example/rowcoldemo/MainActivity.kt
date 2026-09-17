@@ -42,11 +42,25 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MainScreen(modifier: Modifier = Modifier) {
-    Column (modifier.height(400.dp),
-        verticalArrangement = Arrangement.Bottom) {
-        TextCell("1")
-        TextCell("2")
-        TextCell("3")
+    Column(modifier.padding(10.dp)) {
+        Row (modifier.width(1000.dp),
+            horizontalArrangement = Arrangement.SpaceEvenly) {
+            TextCell("1")
+            TextCell("2")
+            TextCell("3")
+        }
+        Row (modifier.width(1000.dp),
+            horizontalArrangement = Arrangement.SpaceBetween) {
+            TextCell("1")
+            TextCell("2")
+            TextCell("3")
+        }
+        Row (modifier.width(1000.dp),
+            horizontalArrangement = Arrangement.SpaceAround) {
+            TextCell("1")
+            TextCell("2")
+            TextCell("3")
+        }
     }
 }
 
