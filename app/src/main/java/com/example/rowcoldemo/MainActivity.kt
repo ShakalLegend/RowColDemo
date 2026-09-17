@@ -42,11 +42,11 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MainScreen(modifier: Modifier = Modifier) {
-    Row (modifier.height(300.dp),
-        horizontalArrangement = Arrangement.SpaceEvenly) {
-        TextCell("1", Modifier.align(Alignment.Top))
-        TextCell("2", Modifier.align(Alignment.CenterVertically))
-        TextCell("3", Modifier.align(Alignment.Bottom))
+    Row {
+        Text("LargeText", Modifier.alignByBaseline(), fontSize = 40.sp, fontWeight = FontWeight.Bold
+        )
+        Text("SmallText", Modifier.alignByBaseline(), fontSize = 32.sp, fontWeight = FontWeight.Bold
+        )
     }
 }
 
