@@ -13,6 +13,7 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
@@ -38,30 +39,12 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun MainScreen(modifier: Modifier = Modifier) {
-    Column {
-        Row{
-            Column(modifier){
-                TextCell("1")
-                TextCell("2")
-                TextCell("3")
-            }
-            Column(modifier){
-                TextCell("4")
-                TextCell("5")
-                TextCell("6")
-            }
-            Column(modifier){
-                TextCell("7")
-                TextCell("8")
-            }
-        }
-        Row {
-            TextCell("9")
-            TextCell("10")
-            TextCell("11")
-        }
+    Row(modifier.size(width = 400.dp,height = 200.dp),
+        verticalAlignment = Alignment.CenterVertically) {
+        TextCell("1")
+        TextCell("2")
+        TextCell("3")
     }
-
 }
 
 @Composable
